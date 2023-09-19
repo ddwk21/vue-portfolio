@@ -15,18 +15,30 @@ main{
   display: flex;
   gap: 10px;
   background: #221f31;
+  background-image: url('./purpleBg.png');
+  background-size: cover;
+  background-repeat: no-repeat;
   position: relative;
   overflow: hidden;
 }
 
 .sidebar{
+  display: flex;
   writing-mode: vertical-rl;
-  text-orientation: sideways;
-  transform: rotate(180deg);
+  text-orientation: sideways-right ;
   text-align: end;
   color: #b0a5e7;
   font-weight: bold;
   padding: .5rem;
+}
+
+.icon{
+  margin:10px;
+  transition: .2s;
+}
+
+.icon:hover{
+  color: #d0c9f3;
 }
 
 .hero{
@@ -39,7 +51,7 @@ main{
   display: flex;
   flex-direction: column;
  text-align: center;
- color: #b0a5e7;
+ color: #d4b0fa;
  font-size: 50px;
  letter-spacing: -1px;
  justify-content: center;
@@ -52,6 +64,7 @@ main{
   flex-direction: column;
   align-items: center;
   padding-top: 15vh;
+  padding-left: 10vw;
 }
 
 .summaryContent h1{
@@ -67,18 +80,20 @@ main{
 }
 
 .summary h1{
-  font-size: 40px;
+  font-size: 60px;
+  line-height: 98%;
+  font-weight: 600;
 }
 
 #Circle1{
   width: 80rem;
   height: 80rem;
   border-radius: 50%;
-  border: 3px solid rgb(113, 87, 140);
-  background: #221f31;
+  border: 2px solid rgb(48, 39, 65);
+  background: transparent;
   position: absolute;
-  top: 37%;
-  left: -20%;
+  top: 50%;
+  left: -30%;
   z-index: 1;
 }
 
@@ -86,11 +101,11 @@ main{
   width: 85rem;
   height: 82rem;
   border-radius: 50%;
-  border: 1px solid rgb(113, 87, 140);
-  background: #221f31;
+  border: 1px solid rgb(48, 39, 65);
+  background: transparent;
   position: absolute;
-  top: 33%;
-  left: -18%;
+  top: 45%;
+  left: -25%;
 }
 
 
