@@ -16,7 +16,7 @@
 
 <template>
     <div class="menuParent">
-        <div class="menuItem" @click="emitItem('about')">
+        <div class="menuItem" @click="$emit('clicked', 'about')">
             ABOUT
         </div>
         <div class="menuItem" @click="emitItem('work')">
@@ -41,7 +41,7 @@
     }
     .menuItem{
         font-size: 150px;
-        font-weight: bold;
+        font-weight: 400;
         color: #d4b0fa;
         transition: .4s;
         cursor: default;

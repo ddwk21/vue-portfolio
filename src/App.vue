@@ -6,10 +6,13 @@
 
   const modalObj = reactive({
     showModal: false,
+    selection: '',
   })
 
-  function toggleModal() {
-    modalObj.showModal = !modalObj.showModal
+  function toggleModal(item) {
+    modalObj.showModal = !modalObj.showModal;
+    modalObj.selection = item;
+    console.log(modalObj.selection)
     console.log(modalObj.showModal)
   }
 
@@ -35,7 +38,7 @@
 
     <div class="circle" id="Circle1">Circle</div>
     <div id="Circle2"></div>
-    <Modal v-if="modalObj.showModal" @clickedOff="toggleModal" />
+    <Modal v-if="modalObj.showModal" @clickedOff="toggleModal" :info="modalObj.selection"/>
   </main>
 </template>
 
