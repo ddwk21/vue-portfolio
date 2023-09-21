@@ -65,15 +65,17 @@ main{
 
 .summaryContent{
   width: 100%;
+  height: 75%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 15vh;
-  padding-left: 10vw;
+  padding-top: 35vh;
+  padding-left: 5vw;
+
 }
 
 .summaryContent h1{
-  padding-top: 8vh;
+  padding-top: 0;
   z-index: 2;
 }
 
@@ -85,10 +87,23 @@ main{
   z-index: 2;
 }
 
+
+
 .summary h1{
   font-size: 60px;
   line-height: 98%;
   font-weight: 300;
+}
+
+.aboutPage{
+  padding-top: 15vh;
+  height: 100vh;
+
+}
+
+.onPage{
+  justify-content: start;
+  
 }
 
 #Circle1{
@@ -114,4 +129,94 @@ main{
   left: -25%;
 }
 
+
+
+.modalParent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.739);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  padding: 20px;
+}
+
+.modalContent{
+  height: 80%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(48, 38, 60, 0.413);
+  border: 2px solid rgb(113, 80, 132);
+  border-radius: 10px;
+  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.518);
+  backdrop-filter: blur(10px);
+
+  
+}
+
+.modalContent h2{
+  font-size: 35px;
+}
+
+.contentContainer{
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  height: 70%;
+  padding: 60px;
+  padding-left: 120px;
+  padding-right: 120px;
+  align-items: center;
+  overflow: scroll;
+
+}
+
+.modalText{
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+
+}
+.modalText p{
+  text-indent: 15px;
+  line-height: 30px;
+}
+.imgContainer{
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  
+  }
+.imgContainer img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+::-webkit-scrollbar{
+  width: 5px;
+  height: 100%;
+}
+
+.xIcon{
+  position: fixed;
+  margin-left: -1000px;
+}
+
+.xIcon:hover{
+  color: #d0c9f3;
+}
+
+.onPage{
+  margin-left: -200px
+}
 

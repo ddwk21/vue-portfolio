@@ -40,12 +40,12 @@
         padding-left:5vw;
     }
     .menuItem{
-        font-size: 150px;
-        font-weight: 400;
+        font-size: 120px;
+        font-weight: 300;
         color: #d4b0fa;
         transition: .4s;
         cursor: default;
-        letter-spacing: -8px;
+        letter-spacing: -9px;
     }
 
     .menuItem:hover{
