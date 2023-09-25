@@ -60,7 +60,9 @@
         <About v-if="showPage==='about'" @closeMenu="handleMenu"></About>
 
       </Transition>
-        <Projects class="projects" v-if="showPage==='work'"></Projects>
+      <Transition>
+        <Projects class="projects" v-if="showPage==='work'" @closeMenu="handleMenu"></Projects>
+      </Transition>
     </div>
     </div>
     <Transition>

@@ -2,7 +2,7 @@
 
     <div class="contentContainer">
         <h1>MITCHELL LEMIEUX</h1>
-        <p>-engineer-designer-developer-</p>
+        <p class="engage">-engineer-designer-developer-</p>
         <font-awesome-icon :icon="['far', 'circle-xmark']" transform="shrink-6" class="xIcon" @click="$emit('closeMenu')"/>
         <div class="imgContainer">
             <img src='../assets/midjourneyMitch.png'/>
@@ -26,4 +26,9 @@
     .imgContainer{
         margin-top:50px;
     }
+
+    .engage{
+        top: 15px;
+    }
+
 </style>

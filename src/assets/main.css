@@ -175,6 +175,7 @@ main{
   padding-right: 120px;
   align-items: center;
   overflow: scroll;
+  position: relative;
 
 }
 
