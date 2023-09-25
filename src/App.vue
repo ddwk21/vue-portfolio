@@ -1,10 +1,11 @@
 <script setup>
 
   import { far } from '@fortawesome/free-regular-svg-icons';
-  import Menu from './components/MenuItem.vue'
-  import Modal from './components/Modal.vue'
+  import Menu from './components/MenuItem.vue';
+  import Modal from './components/Modal.vue';
   import About from './components/About.vue';
-  import Projects from './components/Projects.vue'
+  import Projects from './components/Projects.vue';
+  import Contact from './components/Contact.vue';
   import { reactive, ref } from 'vue';
 
   const modalObj = reactive({
@@ -57,11 +58,15 @@
       </Transition>
       <Transition>
         <!-- <div class="contentContainer" v-if="showPage==='about'"> -->
-        <About v-if="showPage==='about'" @closeMenu="handleMenu"></About>
+        <About v-if="showPage==='about'" @closeMenu="handleMenu" class="page"></About>
 
       </Transition>
       <Transition>
-        <Projects class="projects" v-if="showPage==='work'" @closeMenu="handleMenu"></Projects>
+        <Projects class="page" v-if="showPage==='work'" @closeMenu="handleMenu"></Projects>
+      </Transition>
+
+      <Transition>
+        <Contact  class="page" v-if="showPage==='contact'"  @closeMenu="handleMenu"/>
       </Transition>
     </div>
     </div>
