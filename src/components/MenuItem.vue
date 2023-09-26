@@ -46,11 +46,27 @@
         transition: .4s;
         cursor: default;
         letter-spacing: -9px;
+        z-index: 2;
     }
 
     .menuItem:hover{
         color: #d0c9f3;
         transform: scale(110%);
         letter-spacing: -5px;
+    }
+
+    @media screen and (max-width: 1100px) {
+        .menuParent{
+            padding: 0;
+            padding-top: 10vh;
+        }
+        .menuItem{
+        font-size: 85px;
+        font-weight: 300;
+        color: #d4b0fa;
+        transition: .4s;
+        cursor: default;
+        letter-spacing: -9px;
+    }
     }
 </style>

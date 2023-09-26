@@ -5,16 +5,18 @@ import emailjs from '@emailjs/browser';
 
     const sent = ref(null);
     const form = ref(null)
+    const success = ref('')
+    const failure = ref('')
 
 function sendEmail() {
         console.log(form.value)
       emailjs.sendForm('service_xm4pvrz', 'template_klr71jn', form.value, '5qgiNh7uar6FZhZMQ')
         .then((result) => {
             console.log('SUCCESS!', result.text);
-            sent.value = true;
+            success.value = true
         }, (error) => {
             console.log('FAILED...', error.text);
-            sent.value = false;
+            failure.value = true;
         });
 }
 
@@ -40,11 +42,11 @@ function sendEmail() {
             <br>
             <input type="text" id="message" name="message" placeholder="Enter your message here!">
             <br><br>
-            <input type="submit" id="submit" value="Contact">
-            <div v-if="success === true" class="success">
+            <input type="submit" id="submit" value="Send">
+            <div v-if="success" class="confirm">
                 Message Sent!
             </div>
-            <div v-if="success === false" class="failure">
+            <div v-if="failure" class="confirm">
                 Message failed to send, please try again.
             </div>
         </form>
@@ -54,6 +56,10 @@ function sendEmail() {
 </template>
 
 <style scoped>
+
+    .confirm{
+        padding: 15px;
+    }
 
     label{
         width: 50%;
@@ -119,6 +125,33 @@ function sendEmail() {
     #submit:hover{
         background-color: #725e88a5;
         color: #d9b8ff;
+    }
+
+    @media screen and (max-width: 1100px) {
+        .contactWrapper{width: 85%;}
+        
+        .contact{
+            height: 120vh;
+            width: 90vw;
+            margin-top: 100px;
+            padding-top: 50px;
+        }
+
+        input{
+            width: 90%;
+        }
+
+        #message{
+            width: 90%;
+        }
+
+        #name{
+            height: 120px;
+        }
+
+        #email{
+            height: 120px;
+        }
     }
 
 

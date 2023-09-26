@@ -17,7 +17,7 @@
                 </div>
                 <div class="card">
                     <img src="../assets/wedo.jpg" alt="">
-                    <div class="overlay"><p>MySQL/Handlebars/Express/Node</p></div>
+                    <div class="overlay"><p>MySQL/ Handlebars/ Express/ Node</p></div>
                 </div>
                 <div class="card">
                     <img src="../assets/arthub.jpg" alt="">
@@ -68,13 +68,16 @@
     }
 
     .card{
-        margin: 200px;
+        margin: 400px;
         transform: rotate(90deg);
         height: auto;
         width: auto;
         object-fit: cover;
         scroll-snap-align: center;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .card img{
         width: auto;
@@ -107,7 +110,7 @@
         bottom: 0;
         left: 0;
         right: 0;
-        height: 93%;
+        height: 100%;
         width: 100%;
         opacity: 0;
         transition: .5s ease;
@@ -118,6 +121,35 @@
 
     .card:hover .overlay{
         opacity: 1;
+    }
+
+    h2{
+        font-weight: 300;
+    }
+
+    @media screen and (max-width: 1100px){
+        .card img{
+            height: 200px;
+        }
+
+        .carousel{
+            height: 400px;
+        }
+
+        h2{
+            font-size: 50px;
+        }
+
+        .xIcon2{
+            margin: 0;
+            position: relative;
+            margin-bottom: 50px;
+
+        }
+        .headerContainer{
+            display: flex;
+            flex-direction: column;
+        }
     }
 
 
