@@ -44,9 +44,16 @@
 <template>
   <main>
     <div class="sidebar">
-      <font-awesome-icon :icon="['fab', 'github']" size="2x" class="icon"/>
-      <font-awesome-icon :icon="['fab', 'linkedin']" size="2x" class="icon"/>
-      <font-awesome-icon :icon="['fas', 'envelope']" size="2x" class="icon"/>
+      <a href="https://github.com/ddwk21" target="_blank" class="icon">
+        <font-awesome-icon :icon="['fab', 'github']" size="2x" />
+      </a>
+      <a href="https://www.linkedin.com/in/mitchell-lemieux-b38016268/" target="_blank" class="icon">
+        <font-awesome-icon :icon="['fab', 'linkedin']" size="2x"/>
+      </a>
+      <a href="mailto:gitcheckoutmitch@gmail.com" target="_blank" class="icon">
+
+        <font-awesome-icon :icon="['fas', 'envelope']" size="2x" class="icon"/>
+      </a>
     </div>
     <div :class="['summary', {'onPage': !showMenu}]">
       <div :class="['summaryContent', {'aboutPage': !showMenu}]">

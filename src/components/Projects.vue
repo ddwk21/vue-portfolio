@@ -1,3 +1,24 @@
+<script setup>
+    import Modal from './Modal.vue';
+    import {ref} from 'vue';
+    import splashPosterFinal from '../assets/splashPosterFinal.png';
+    import triColor from '../assets/projects.png'
+
+    const useModal = ref(false)
+    const modalImage = ref(null)
+
+    function toggleModal(filePath){
+        //if I'm clicking on an image to display, set filepath
+        if(filePath){
+            modalImage.value = filePath;
+        }
+
+        //either way toggle modal
+        useModal.value = !useModal.value
+    }
+</script>
+
+
 <template>
     <div id="ProjectContainer">
         <div class="headerContainer">
@@ -8,39 +29,48 @@
         </div>
         
 
-        <div class="cardContainer">
+        <div v-if="!useModal" class="cardContainer">
 
             <div class="carousel">
-                <div class="card">
+                <a href="https://fierce-sands-41595.herokuapp.com/" target="_blank" class="card">
                     <img src="../assets/cycloneScreen.png" alt="">
                     <div class="overlay"><p>MERN</p></div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="https://we-do-application.herokuapp.com/" target="_blank" class="card">
                     <img src="../assets/wedo.jpg" alt="">
                     <div class="overlay"><p>MySQL/ Handlebars/ Express/ Node</p></div>
-                </div>
-                <div class="card">
+                </a>
+                <a href="https://ddwk21.github.io/art-hub/" target="_blank" class="card">
                     <img src="../assets/arthub.jpg" alt="">
                     <div class="overlay"><p>Vanilla JS</p></div>
-                </div>
-                <div class="card">
+                </a>
+                <div class="card" @click="toggleModal(splashPosterFinal)">
                     <img src="../assets/splashPosterFinal.png" alt="">
                     <div class="overlay"><p>Photoshop print marketing</p></div>
                 </div>
-                <div class="card">
+                <div class="card" @click="toggleModal(triColor)">
                     <img src="../assets/projects.png" alt="">
                     <div class="overlay"><p>Photoshop print marketing</p></div>
                 </div>
             </div>
             
         </div>
+
+        <Modal class="modalImg" v-if="useModal" :image="modalImage" @click="toggleModal"></Modal>
         <p>scroll 	&#8594;</p>
     </div>
 </template>
 
 <style scoped>
 
+    .modalImg{
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
     #projectContainer{
+        position: relative;
         height: 100vh;
         width: 100vw;
         display: flex;
