@@ -32,9 +32,15 @@
         <div v-if="!useModal" class="cardContainer">
 
             <div class="carousel">
+                
+                <a href="https://github.com/ddwk21/hotline-chat" target="_blank" class="card">
+                    <img src="../assets/chatSnip.png" alt="">
+                    <div class="overlay"><p>WIP Firebase/React Chat App</p></div>
+                </a>
+
                 <a href="https://fierce-sands-41595.herokuapp.com/" target="_blank" class="card">
                     <img src="../assets/cycloneScreen.png" alt="">
-                    <div class="overlay"><p>MERN</p></div>
+                    <div class="overlay"><p>MERN with massive data ingestion</p></div>
                 </a>
                 <a href="https://we-do-application.herokuapp.com/" target="_blank" class="card">
                     <img src="../assets/wedo.jpg" alt="">
